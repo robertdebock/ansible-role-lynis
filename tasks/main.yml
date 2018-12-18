@@ -16,8 +16,9 @@
     - lyris_run_now
 
 - name: run lyris
-  minute: "23"
-  hour: "4"
-  job: "{{ lyris_destination }}/lynis --cronjob audit system | tee -a {{ lyris_output }}"
+  cron:
+    minute: "23"
+    hour: "4"
+    job: "{{ lyris_destination }}/lynis --cronjob audit system | tee -a {{ lyris_output }}"
   when:
     - lyris_cronjob
