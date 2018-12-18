@@ -15,10 +15,14 @@
   when:
     - lyris_run_now
 
-- name: run lyris
+- name: schedule a run of lyris
   cron:
+    name: run lyris
     minute: "23"
     hour: "4"
     job: "{{ lyris_destination }}/lynis --cronjob audit system | tee -a {{ lyris_output }}"
+    file: lyris
+    user: root
   when:
     - lyris_cronjob
+    - ansible_virtualization_type != "docker" or lyris_ignore_docker
