@@ -31,20 +31,25 @@ These variables are set in `defaults/main.yml`:
 ---
 # defaults file for lynis
 
-# Where to install lyris
-lyris_destination: "/tmp/lynis"
+# Where to install lynis
+lynis_destination: "/tmp/lynis"
 
 # The version to install
-lyris_version: 2.7.0
+lynis_version: 2.7.0
 
 # Where to save the output of a report.
-lyris_output: "{{ lyris_destination }}/{{ ansible_date_time.date }}-audit_systen.txt"
+lynis_output: "{{ lynis_destination }}/{{ ansible_date_time.date }}-audit_systen.txt"
 
-# Run lyris on execution of the playbook?
-lyris_run_now: yes
+# Run lynis on execution of the playbook?
+lynis_run_now: yes
 
 # Schedule a repetetive job?
-lyris_cronjob: yes
+lynis_cronjob: yes
+
+# Some Docker containers do not allow managing services, rebooting and writing
+# to some locations in /etc. The role skips tasks that will typically fail in
+# Docker. With this parameter you can tell the role to -not- skip these tasks.
+lynis_ignore_docker: yes
 
 ```
 

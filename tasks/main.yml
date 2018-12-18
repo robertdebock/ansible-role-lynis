@@ -2,27 +2,27 @@
 # tasks file for lynis
 - name: install lynis
   git:
-    repo: "{{ lyris_repository }}"
-    dest: "{{ lyris_destination }}"
-    version: "{{ lyris_version }}"
+    repo: "{{ lynis_repository }}"
+    dest: "{{ lynis_destination }}"
+    version: "{{ lynis_version }}"
 
 - name: audit system
-  shell: "{{ lyris_destination }}/lynis audit system | tee -a {{ lyris_output }}"
+  shell: "{{ lynis_destination }}/lynis audit system | tee -a {{ lynis_output }}"
   register: audit_system
   args:
-    creates: "{{ lyris_output }}"
-    chdir: "{{ lyris_destination }}"
+    creates: "{{ lynis_output }}"
+    chdir: "{{ lynis_destination }}"
   when:
-    - lyris_run_now
+    - lynis_run_now
 
-- name: schedule a run of lyris
+- name: schedule a run of lynis
   cron:
-    name: run lyris
+    name: run lynis
     minute: "23"
     hour: "4"
-    job: "{{ lyris_destination }}/lynis --cronjob audit system | tee -a {{ lyris_output }}"
-    file: lyris
+    job: "{{ lynis_destination }}/lynis --cronjob audit system | tee -a {{ lynis_output }}"
+    cron_file: lynis
     user: root
   when:
-    - lyris_cronjob
-    - ansible_virtualization_type != "docker" or lyris_ignore_docker
+    - lynis_cronjob
+    - ansible_virtualization_type != "docker" or lynis_ignore_docker
