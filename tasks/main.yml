@@ -15,8 +15,7 @@
   when:
     - lyris_run_now
 
-- name: add crontab entry
-  name: run lyris
+- name: run lyris
   minute: "23"
   hour: "4"
   job: "{{ lyris_destination }}/lynis --cronjob audit system | tee -a {{ lyris_output }}"
