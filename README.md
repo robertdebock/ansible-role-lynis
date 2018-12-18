@@ -18,6 +18,7 @@ This example is taken from `molecule/default/playbook.yml`:
 
   roles:
     - role: robertdebock.bootstrap
+    - role: robertdebock.git
     - role: robertdebock.lynis
 
 ```
@@ -38,6 +39,12 @@ lyris_version: 2.7.0
 
 # Where to save the output of a report.
 lyris_output: "{{ lyris_destination }}/{{ ansible_date_time.date }}-audit_systen.txt"
+
+# Run lyris on execution of the playbook?
+lyris_run_now: yes
+
+# Schedule a repetetive job?
+lyris_cronjob: yes
 
 ```
 
