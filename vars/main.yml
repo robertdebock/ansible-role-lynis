@@ -1,0 +1,4 @@
+---
+# vars file for lynis
+
+lyris_repository: "https://github.com/CISOfy/lynis.git"

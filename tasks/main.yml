@@ -1,0 +1,24 @@
+---
+# tasks file for lynis
+- name: install lynis
+  git:
+    repo: "{{ lyris_repository }}"
+    dest: "{{ lyris_destination }}"
+    version: "{{ lyris_version }}"
+
+- name: audit system
+  shell: "{{ lyris_destination }}/lynis audit system | tee -a {{ lyris_output }}"
+  register: audit_system
+  args:
+    creates: "{{ lyris_output }}"
+    chdir: "{{ lyris_destination }}"
+  when:
+    - lyris_run_now
+
+- name: add crontab entry
+  name: run lyris
+  minute: "23"
+  hour: "4"
+  job: "{{ lyris_destination }}/lynis --cronjob audit system | tee -a {{ lyris_output }}"
+  when:
+    - lyris_cronjob
