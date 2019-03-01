@@ -32,8 +32,6 @@ platforms:
     image: fedora:rawhide
   - name: lynis-opensuse-leap
     image: opensuse:leap
-  - name: lynis-opensuse-tumbleweed
-    image: opensuse:tumbleweed
   - name: lynis-ubuntu-latest
     image: ubuntu:latest
   - name: lynis-ubuntu-rolling
