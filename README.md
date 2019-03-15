@@ -20,7 +20,6 @@ This example is taken from `molecule/default/playbook.yml`:
     - role: robertdebock.bootstrap
     - role: robertdebock.git
     - role: robertdebock.lynis
-
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -47,12 +46,6 @@ lynis_run_now: yes
 
 # Schedule a repetetive job?
 lynis_cronjob: yes
-
-# Some Docker containers do not allow managing services, rebooting and writing
-# to some locations in /etc. The role skips tasks that will typically fail in
-# Docker. With this parameter you can tell the role to -not- skip these tasks.
-lynis_ignore_docker: yes
-
 ```
 
 Requirements

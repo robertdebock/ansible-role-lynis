@@ -25,4 +25,4 @@
     user: root
   when:
     - lynis_cronjob
-    - ansible_virtualization_type != "docker" or lynis_ignore_docker
+    - ansible_virtualization_type != "docker"
