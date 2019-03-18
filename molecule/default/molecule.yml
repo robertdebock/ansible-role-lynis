@@ -10,38 +10,56 @@ driver:
 platforms:
   - name: lynis-alpine-edge
     image: alpine:edge
+    pre_build_image: yes
     command: sh -c "while true ; do sleep 1 ; done"
   - name: lynis-alpine-latest
     image: alpine:latest
+    pre_build_image: yes
     command: sh -c "while true ; do sleep 1 ; done"
   - name: lynis-archlinux
     image: archlinux/base
+    pre_build_image: yes
   - name: lynis-centos-6
     image: centos:6
+    pre_build_image: yes
   - name: lynis-centos-latest
     image: centos:latest
+    pre_build_image: yes
   - name: lynis-debian-latest
     image: debian:latest
+    pre_build_image: yes
   - name: lynis-debian-stable
     image: debian:stable
+    pre_build_image: yes
   - name: lynis-debian-unstable
     image: debian:unstable
+    pre_build_image: yes
   - name: lynis-fedora-latest
     image: fedora:latest
+    pre_build_image: yes
   - name: lynis-fedora-rawhide
     image: fedora:rawhide
+    pre_build_image: yes
   - name: lynis-opensuse-leap
     image: opensuse:leap
+    pre_build_image: yes
   - name: lynis-ubuntu-latest
     image: ubuntu:latest
+    pre_build_image: yes
   - name: lynis-ubuntu-rolling
     image: ubuntu:rolling
+    pre_build_image: yes
   - name: lynis-ubuntu-devel
     image: ubuntu:devel
+    pre_build_image: yes
   - name: lynis-ubuntu-latest
     image: ubuntu:latest
+    pre_build_image: yes
 provisioner:
   name: ansible
+  playbooks:
+    prepare: ../resources/prepare.yml
+    converge: ../resources/playbook.yml
   lint:
     name: ansible-lint
 scenario:
