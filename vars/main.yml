@@ -1,4 +1,7 @@
 ---
 # vars file for lynis
 
+lynis_requirements:
+  - bash
+
 lynis_repository: "https://github.com/CISOfy/lynis.git"

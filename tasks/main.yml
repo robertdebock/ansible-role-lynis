@@ -1,5 +1,12 @@
 ---
 # tasks file for lynis
+- name: install requirements
+  package:
+    name: "{{ lynis_requirements }}"
+  register: lynis_install_requirements
+  until: lynis_install_requirements is succes
+  retries: 3
+
 - name: install lynis
   git:
     repo: "{{ lynis_repository }}"
