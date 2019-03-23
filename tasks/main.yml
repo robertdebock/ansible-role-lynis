@@ -7,7 +7,7 @@
     version: "{{ lynis_version }}"
 
 - name: audit system
-  shell: "{{ lynis_destination }}/lynis audit system | tee -a {{ lynis_output }}"
+  shell: "set -o pipefail ; {{ lynis_destination }}/lynis audit system | tee -a {{ lynis_output }}"
   register: audit_system
   args:
     creates: "{{ lynis_output }}"
