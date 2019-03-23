@@ -12,6 +12,7 @@
   args:
     creates: "{{ lynis_output }}"
     chdir: "{{ lynis_destination }}"
+    executable: /bin/bash
   when:
     - lynis_run_now
 
