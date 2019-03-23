@@ -4,7 +4,7 @@
   package:
     name: "{{ lynis_requirements }}"
   register: lynis_install_requirements
-  until: lynis_install_requirements is succes
+  until: lynis_install_requirements is succeeded
   retries: 3
 
 - name: install lynis
