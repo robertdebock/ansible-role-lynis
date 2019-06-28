@@ -21,7 +21,7 @@
     chdir: "{{ lynis_destination }}"
     executable: /bin/bash
   when:
-    - lynis_run_now
+    - lynis_run_now | bool
 
 - name: schedule a run of lynis
   cron:
@@ -32,5 +32,5 @@
     cron_file: lynis
     user: root
   when:
-    - lynis_cronjob
+    - lynis_cronjob | bool
     - ansible_virtualization_type != "docker"
