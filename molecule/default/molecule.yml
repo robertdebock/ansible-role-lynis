@@ -25,9 +25,6 @@ platforms:
   - name: lynis-centos-latest
     image: centos:latest
     pre_build_image: yes
-  - name: lynis-debian-latest
-    image: debian:latest
-    pre_build_image: yes
   - name: lynis-debian-stable
     image: debian:stable
     pre_build_image: yes
