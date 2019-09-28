@@ -1,6 +1,5 @@
 ---
 # vars file for lynis
-
 lynis_requirements:
   - bash
 
