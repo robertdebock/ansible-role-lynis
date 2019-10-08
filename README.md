@@ -6,8 +6,8 @@ lynis
 
 Install and configure lynis on your system.
 
-<img src="https://img.shields.io/ansible/role/d/35644"/>
-<img src="https://img.shields.io/ansible/quality/35644"/>
+<img src="https://img.shields.io/ansible/role/d/"/>
+<img src="https://img.shields.io/ansible/quality/"/>
 
 Example Playbook
 ----------------
