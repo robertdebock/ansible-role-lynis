@@ -33,4 +33,3 @@
     user: root
   when:
     - lynis_cronjob | bool
-    - ansible_virtualization_type != "docker"
