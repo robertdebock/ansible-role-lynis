@@ -31,6 +31,7 @@ The machine you are running this on, may need to be prepared.
 
   roles:
     - role: robertdebock.bootstrap
+    - role: robertdebock.cron
     - role: robertdebock.git
 ```
 
@@ -71,6 +72,7 @@ The following roles can be installed to ensure all requirements are met, using `
 ```yaml
 ---
 - robertdebock.bootstrap
+- robertdebock.cron
 - robertdebock.git
 
 ```
