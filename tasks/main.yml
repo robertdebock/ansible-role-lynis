@@ -15,7 +15,7 @@
 
 - name: audit system
   shell: "set -o pipefail ; {{ lynis_destination }}/lynis audit system | tee -a {{ lynis_output }}"
-  register: audit_system
+  register: lynix_audit_system
   args:
     creates: "{{ lynis_output }}"
     chdir: "{{ lynis_destination }}"
