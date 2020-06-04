@@ -2,9 +2,9 @@
 
 Install and configure lynis on your system.
 
-|Travis|GitHub|Quality|Downloads|
-|------|------|-------|---------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-lynis.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-lynis)|[![github](https://github.com/robertdebock/ansible-role-lynis/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-lynis/actions)|[![quality](https://img.shields.io/ansible/quality/35644)](https://galaxy.ansible.com/robertdebock/lynis)|[![downloads](https://img.shields.io/ansible/role/d/35644)](https://galaxy.ansible.com/robertdebock/lynis)|
+|Travis|GitHub|Quality|Downloads|Version|
+|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-lynis.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-lynis)|[![github](https://github.com/robertdebock/ansible-role-lynis/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-lynis/actions)|[![quality](https://img.shields.io/ansible/quality/35644)](https://galaxy.ansible.com/robertdebock/lynis)|[![downloads](https://img.shields.io/ansible/role/d/35644)](https://galaxy.ansible.com/robertdebock/lynis)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-lynis.svg)](https://github.com/robertdebock/ansible-role-lynis/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
