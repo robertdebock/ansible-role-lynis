@@ -60,7 +60,7 @@ These variables are set in `defaults/main.yml`:
 lynis_destination: "/tmp/lynis"
 
 # The version to install
-lynis_version: 2.7.0
+lynis_version: 3.0.0
 
 # Where to save the output of a report.
 lynis_output: "{{ lynis_destination }}/{{ ansible_date_time.date }}-audit_system.txt"
