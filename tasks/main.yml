@@ -15,6 +15,9 @@
     repo: "{{ lynis_repository }}"
     dest: "{{ lynis_destination }}"
     version: "{{ lynis_version }}"
+  register: lynis_install_lynis
+  until: lynis_install_lynis is succeeded
+  retries: 3
 
 - name: audit system
   shell: "set -o pipefail ; {{ lynis_destination }}/lynis audit system | tee -a {{ lynis_output }}"
