@@ -1,4 +1,5 @@
 ---
-- robertdebock.bootstrap
-- robertdebock.cron
-- robertdebock.git
+roles:
+  - name: robertdebock.bootstrap
+  - name: robertdebock.cron
+  - name: robertdebock.git
