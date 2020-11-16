@@ -3,21 +3,18 @@
   assert:
     that:
       - lynis_destination is defined
-      - lynis_destination | length > 0
     quiet: yes
 
 - name: test if lynis_version is set correctly
   assert:
     that:
       - lynis_version is defined
-      - lynis_version | length > 0
     quiet: yes
 
 - name: test if lynis_output is set correctly
   assert:
     that:
       - lynis_output is defined
-      - lynis_output | length > 0
     quiet: yes
 
 - name: test if lynis_run_now is set correctly
