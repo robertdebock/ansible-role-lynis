@@ -1,6 +1,9 @@
 ---
 # handlers file for lynis
+
 - name: restart lynis
   service:
     name: "{{ lynis_service }}"
     state: restarted
+  when:
+    - not ansible_check_mode | bool
