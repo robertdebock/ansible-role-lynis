@@ -1,4 +1,5 @@
 ---
+
 - name: test if lynis_destination is set correctly
   assert:
     that:
