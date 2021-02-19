@@ -2,7 +2,7 @@
 # handlers file for lynis
 
 - name: restart lynis
-  service:
+  ansible.builtin.service:
     name: "{{ lynis_service }}"
     state: restarted
   when:
