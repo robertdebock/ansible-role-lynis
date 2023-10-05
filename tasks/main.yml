@@ -19,7 +19,7 @@
 
 - name: Audit system
   ansible.builtin.shell:
-    cmd: "set -o pipefail ; {{ lynis_destination }}/lynis audit system | tee -a {{ lynis_output }}"
+    cmd: "set -o pipefail && {{ lynis_destination }}/lynis audit system | tee -a {{ lynis_output }}"
     creates: "{{ lynis_output }}"
     chdir: "{{ lynis_destination }}"
     executable: /bin/bash
