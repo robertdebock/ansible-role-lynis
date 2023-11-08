@@ -2,9 +2,9 @@
 
 Install and configure lynis on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-lynis/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-lynis/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-lynis/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-lynis)|[![quality](https://img.shields.io/ansible/quality/35644)](https://galaxy.ansible.com/robertdebock/lynis)|[![downloads](https://img.shields.io/ansible/role/d/35644)](https://galaxy.ansible.com/robertdebock/lynis)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-lynis.svg)](https://github.com/robertdebock/ansible-role-lynis/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-lynis/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-lynis/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-lynis/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-lynis)|[![downloads](https://img.shields.io/ansible/role/d/24532)](https://galaxy.ansible.com/robertdebock/lynis)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-lynis.svg)](https://github.com/robertdebock/ansible-role-lynis/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -102,7 +102,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-lynis/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-lynis/issues).
 
 ## [License](#license)
 
