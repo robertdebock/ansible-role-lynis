@@ -1,5 +1,7 @@
 # [Ansible role lynis](#lynis)
 
+> THIS ROLE HAS BEEN ARCHIVED AS OF DEC 2023.
+
 Install and configure lynis on your system.
 
 |GitHub|GitLab|Downloads|Version|
