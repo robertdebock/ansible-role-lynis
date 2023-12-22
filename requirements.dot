@@ -1,0 +1,13 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    "lynis" [fillcolor=yellow style=filled penwidth=3]
+    "robertdebock.bootstrap" [fillcolor=green style=filled]
+    "robertdebock.cron" [fillcolor=green style=filled]
+    "robertdebock.git" [fillcolor=green style=filled]
+  }
+  "lynis" -> "robertdebock.bootstrap"
+  "lynis" -> "robertdebock.cron"
+  "lynis" -> "robertdebock.git"
+}
